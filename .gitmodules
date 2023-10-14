@@ -1,0 +1,16 @@
+[submodule "gtda/externals/gudhi-devel"]
+	path = gtda/externals/gudhi-devel
+	url = https://github.com/alibayeh/gudhi-devel.git
+	branch = giotto
+[submodule "gtda/externals/pybind11"]
+	path = gtda/externals/pybind11
+	url = https://github.com/pybind/pybind11
+	branch = v2.11
+[submodule "gtda/externals/eigen"]
+	path = gtda/externals/eigen
+	url = https://gitlab.com/libeigen/eigen
+	branch = 3.4.1
+[submodule "gtda/externals/hera"]
+	path = gtda/externals/hera
+	url = https://github.com/alibayeh/hera.git
+	branch = giotto

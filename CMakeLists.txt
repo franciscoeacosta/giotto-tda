@@ -24,7 +24,8 @@ target_link_libraries(gtda_wasserstein LINK_PUBLIC ${Boost_LIBRARIES})
 target_compile_definitions(gtda_wasserstein PRIVATE BOOST_RESULT_OF_USE_DECLTYPE=1 BOOST_ALL_NO_LIB=1 BOOST_SYSTEM_NO_DEPRECATED=1)
 
 target_include_directories(gtda_wasserstein PRIVATE "${HERA_DIR}")
-target_include_directories(gtda_wasserstein PRIVATE "${HERA_DIR}/wasserstein/include")
+target_include_directories(gtda_wasserstein PRIVATE "${HERA_DIR}/include")
+target_include_directories(gtda_wasserstein PRIVATE "${HERA_DIR}/extern")
 
 if(MSVC)
     target_compile_options(gtda_wasserstein PUBLIC $<$<CONFIG:RELEASE>: /Wall /O2>)
@@ -45,7 +46,7 @@ target_link_libraries(gtda_bottleneck LINK_PUBLIC ${Boost_LIBRARIES})
 target_compile_definitions(gtda_bottleneck PRIVATE BOOST_RESULT_OF_USE_DECLTYPE=1 BOOST_ALL_NO_LIB=1 BOOST_SYSTEM_NO_DEPRECATED=1)
 
 target_include_directories(gtda_bottleneck PRIVATE "${HERA_DIR}")
-target_include_directories(gtda_bottleneck PRIVATE "${HERA_DIR}/bottleneck/include")
+target_include_directories(gtda_bottleneck PRIVATE "${HERA_DIR}/include")
 
 if(MSVC)
     target_compile_options(gtda_bottleneck PUBLIC $<$<CONFIG:RELEASE>: /Wall /O2>)
@@ -69,6 +70,7 @@ endif()
 target_link_libraries(gtda_cubical_complex LINK_PUBLIC ${Boost_LIBRARIES})
 target_compile_definitions(gtda_cubical_complex PRIVATE BOOST_RESULT_OF_USE_DECLTYPE=1 BOOST_ALL_NO_LIB=1 BOOST_SYSTEM_NO_DEPRECATED=1)
 
+target_include_directories(gtda_cubical_complex PRIVATE "${GUDHI_SRC_DIR}/common/include")
 target_include_directories(gtda_cubical_complex PRIVATE "${GUDHI_SRC_DIR}/Bitmap_cubical_complex/include")
 target_include_directories(gtda_cubical_complex PRIVATE "${GUDHI_SRC_DIR}/python/include")
 
@@ -95,6 +97,7 @@ target_link_libraries(gtda_persistent_cohomology LINK_PUBLIC ${Boost_LIBRARIES})
 target_compile_definitions(gtda_persistent_cohomology PRIVATE BOOST_RESULT_OF_USE_DECLTYPE=1 BOOST_ALL_NO_LIB=1 BOOST_SYSTEM_NO_DEPRECATED=1)
 
 target_include_directories(gtda_persistent_cohomology PRIVATE "${GUDHI_SRC_DIR}/Persistent_cohomology/include")
+target_include_directories(gtda_persistent_cohomology PRIVATE "${GUDHI_SRC_DIR}/Simplex_tree/include")
 target_include_directories(gtda_persistent_cohomology PRIVATE "${GUDHI_SRC_DIR}/common/include")
 target_include_directories(gtda_persistent_cohomology PRIVATE "${GUDHI_SRC_DIR}/Bitmap_cubical_complex/include")
 target_include_directories(gtda_persistent_cohomology PRIVATE "${GUDHI_SRC_DIR}/python/include")
@@ -154,6 +157,7 @@ target_compile_definitions(gtda_periodic_cubical_complex PRIVATE BOOST_RESULT_OF
 
 target_include_directories(gtda_periodic_cubical_complex PRIVATE "${GUDHI_SRC_DIR}/Bitmap_cubical_complex/include")
 target_include_directories(gtda_periodic_cubical_complex PRIVATE "${GUDHI_SRC_DIR}/Persistent_cohomology/include")
+target_include_directories(gtda_periodic_cubical_complex PRIVATE "${GUDHI_SRC_DIR}/Simplex_tree/include")
 target_include_directories(gtda_periodic_cubical_complex PRIVATE "${GUDHI_SRC_DIR}/python/include")
 target_include_directories(gtda_periodic_cubical_complex PRIVATE "${GUDHI_SRC_DIR}/common/include")
 

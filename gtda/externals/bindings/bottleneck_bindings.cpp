@@ -13,7 +13,7 @@
 typedef SSIZE_T ssize_t;
 #endif
 
-#include <bottleneck/include/bottleneck.h>
+#include <include/hera/bottleneck.h>
 
 // PYBIND11
 #include <pybind11/pybind11.h>
